@@ -1,5 +1,0 @@
-in_years = [10,20,30,40]
-
-puts 'How old are you?'
-age = gets.chomp
-
