@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["object","doubler()"],"longSearchIndex":["object","object#doubler()"],"info":[["Object","","Object.html","",""],["doubler","Object","Object.html#method-i-doubler","(start)","<p>doubler.rb\n"]]}}
