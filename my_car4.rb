@@ -1,4 +1,4 @@
-# my_car3.rb
+# my_car4.rb
 
 class MyCar
   attr_accessor :color
@@ -32,6 +32,13 @@ class MyCar
     self.color = color
   end
 
+  def self.gas_mileage(miles, gallons)
+    puts "#{miles / gallons} miles per gallon."
+  end
+
+  def to_s
+    "This car is a #{@model} that is #{@color}."
+  end
 end
 
 
@@ -54,3 +61,5 @@ puts camry.color
 puts camry.year
 puts camry.spray_paint("yellow")
 puts camry.color
+MyCar.gas_mileage(432, 13)
+puts camry
