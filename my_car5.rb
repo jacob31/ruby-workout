@@ -1,20 +1,48 @@
-# my_car4.rb
+# my_car5.rb
 
-class MyCar
+class Vehicle
+  @@vehicle_count = 0
+
+  def initialize
+    @@vehicle_count += 1
+  end
+
+  def display_vehicle_count
+    puts "#{@@vehicle_count}"
+  end
+
+end
+
+class MyCar 
+  NUMBER_OF_DOORS = 4
+
   attr_accessor :color
-  attr_reader :year
+  attr_reader :year, :model
 
-  def initialize (year, model, color)
+  def initialize(year, model, color)
     @year = year
     @model = model
     @color = color
     @speed = 0
+    Vehicle.new
+
+  end
+
+  def display_vehicle_count
+    puts method(display_vehicle_count).super_method.call
+  end
+
+  def spray_paint(color)
+    self.color = color
+  end
+
+  def to_s
+    "This car is a #{self.model} that is #{self.color}."
   end
 
   def speed
     puts @speed
   end
-
 
   def speed_up(number)
     @speed += number
@@ -27,20 +55,11 @@ class MyCar
   def shut_off
     @speed = 0
   end
-  
-  def spray_paint(color)
-    self.color = color
-  end
 
   def self.gas_mileage(miles, gallons)
     puts "#{miles / gallons} miles per gallon."
   end
-
-  def to_s
-    "This car is a #{@model} that is #{@color}."
-  end
 end
-
 
 
 camry = MyCar.new(2012, 'Toyota Camry', 'gold')
@@ -60,3 +79,4 @@ puts camry.spray_paint("yellow")
 puts camry.color
 MyCar.gas_mileage(432, 13)
 puts camry
+Vehicle.display_vehicle_count
