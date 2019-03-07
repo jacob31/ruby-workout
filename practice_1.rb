@@ -14,5 +14,14 @@ first_name = gets.chomp.capitalize
 
 puts "\n\nWelcome #{first_name}."
 
-puts "\n\nThis is the code used to request and respond to our request for your name: \n\n"
+puts "Below we used the 'ENV' constant in ruby to print variables that affect this computer."
 
+ENV.each do |key, description|
+  puts "#{key} :: #{description}"
+end
+
+time_now = Time.new
+
+puts "\n\nNext we have a system time stamp of the current time.\n\n"
+
+puts "#{time_now}".class
