@@ -41,8 +41,10 @@ end
 
 RSpec.describe Solution do
   it 'sums multiples of 3 and 5' do
-    expect(Solution.solution_for(10)).to eq(23)
-    expect(Solution.solution_for(1000)).to eq(266333)
+    expect(Solution.solution_for(30)).to eq(210)
+    expect(Solution.solution_for(500)).to eq(66333)
   end
 end
+
+puts Solution.solution_for(500)
 
